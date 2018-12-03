@@ -28,10 +28,7 @@ public abstract class YandexTranslatorAPI {
       PARAM_LANG_PAIR = "&lang=",
       PARAM_TEXT = "&text=";
 
-  /**
-   * Sets the API key.
-   * @param pKey The API key.
-   */
+
   public static void setKey(final String pKey) {
     apiKey = pKey;
   }
@@ -41,13 +38,7 @@ public abstract class YandexTranslatorAPI {
     referrer = pReferrer;
   }
 
-  /**
-   * Forms an HTTPS request, sends it using GET method and returns the result of the request as a String.
-   * 
-   * @param url The URL to query for a String response.
-   * @return The translated String.
-   * @throws Exception on error.
-   */
+
   private static String retrieveResponse(final URL url) throws Exception {
     final HttpsURLConnection uc = (HttpsURLConnection) url.openConnection();
     if(referrer!=null)
@@ -122,13 +113,7 @@ public abstract class YandexTranslatorAPI {
     return values;
   }
 
-  /**
-   * Reads an InputStream and returns its contents as a String.
-   * Also effects rate control.
-   * @param inputStream The InputStream to read from.
-   * @return The contents of the InputStream as a String.
-   * @throws Exception on error.
-   */
+
   private static String inputStreamToString(final InputStream inputStream) throws Exception {
     final StringBuilder outputBuilder = new StringBuilder();
 
