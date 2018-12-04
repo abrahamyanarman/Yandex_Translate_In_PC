@@ -100,6 +100,7 @@ public class TranslateButton extends JFrame {
         });
         setUndecorated(true);
         setAlwaysOnTop(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
 
